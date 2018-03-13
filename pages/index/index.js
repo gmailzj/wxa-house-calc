@@ -9,17 +9,17 @@ Page({
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     //事件处理函数
-    bindViewTap: function () {
+    bindViewTap: function() {
         wx.navigateTo({
             url: '../logs/logs'
         })
     },
-    onLoad: function () {
+    onLoad: function() {
         wx.setClipboardData({
             data: 'data',
-            success: function (res) {
+            success: function(res) {
                 wx.getClipboardData({
-                    success: function (res) {
+                    success: function(res) {
                         console.log(res.data) // data
                     }
                 })
@@ -52,7 +52,7 @@ Page({
             })
         }
     },
-    getUserInfo: function (e) {
+    getUserInfo: function(e) {
         console.log(e)
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
