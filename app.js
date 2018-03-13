@@ -33,6 +33,22 @@ App({
       }
     })
   },
+  onShow: function (options) {
+      // Do something when show.
+      let str = 'Do something when show';
+      str = this.custom.fmt(str);
+      console.log(str);
+  },
+  onHide: function () {
+      // Do something when hide.
+      console.log('Do something when hide');
+  },
+  onError: function (msg) {
+      console.log(msg)
+  },
+  custom:{
+    fmt:str=>{return 'debug:' + str}
+  },
   globalData: {
     userInfo: null
   }
